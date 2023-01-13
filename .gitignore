@@ -1,0 +1,20 @@
+__pycache__/
+.venv/
+.idea/
+.vscode/
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+dist/
+build/
+workdir/
+backend/workdir/
+*.egg-info/
+.pytest_cache/
+tmp-cpm/
+
+# Local helper outputs
+files_to_commit.txt
+source_files.txt

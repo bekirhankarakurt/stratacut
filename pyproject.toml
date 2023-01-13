@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdfsplitterpro"
+version = "0.1.0"
+description = "Local web dashboard to preview and split large PDFs safely."
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "python-multipart>=0.0.9",
+  "pymupdf>=1.24",
+  "pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5", "pytest>=8"]
+
+[tool.setuptools]
+packages = ["backend", "backend.app", "backend.app.api", "backend.app.core", "backend.app.models", "backend.app.services"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
